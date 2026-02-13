@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_axis_mag_sq_behav/xsimk -simmode gui -wdb tb_axis_mag_sq_behav.wdb -simrunnum 0 -socket 43679
+Design successfully loaded
+Design Loading Memory Usage: 401172 KB (Peak: 401224 KB)
+Design Loading CPU Usage: 700 ms
+Simulation completed
+Simulation Memory Usage: 491108 KB (Peak: 540440 KB)
+Simulation CPU Usage: 710 ms

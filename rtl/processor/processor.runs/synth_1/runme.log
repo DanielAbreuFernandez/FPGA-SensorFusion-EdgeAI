@@ -1,0 +1,437 @@
+
+*** Running vivado
+    with args -log top_level_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_wrapper.tcl
+
+
+****** Vivado v2025.1 (64-bit)
+  **** SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Thu Feb 12 20:58:19 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source top_level_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/daniel/Xilinx/2025.1/Vivado/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental /home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.srcs/utils_1/imports/synth_1/top_level_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.srcs/utils_1/imports/synth_1/top_level_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top_level_wrapper -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 170663
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2396.016 ; gain = 441.680 ; free physical = 4090 ; free virtual = 22236
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_level_wrapper' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/hdl/top_level_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'top_level' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:649]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axi_dma_0_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axi_dma_0_0' (0#1) [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_axi_dma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'top_level_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:880]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'top_level_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:880]
+WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'top_level_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:880]
+WARNING: [Synth 8-7071] port 's2mm_introut' of module 'top_level_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:880]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'top_level_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:880]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'top_level_axi_dma_0_0' has 64 connections declared, but only 59 given [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:880]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axi_gpio_0_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axi_gpio_0_0' (0#1) [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axi_mem_intercon_1' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1344]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1GTS4AD' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1GTS4AD' (0#1) [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:13]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_AMOBU1' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:254]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axi_mem_intercon_imp_auto_pc_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_axi_mem_intercon_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axi_mem_intercon_imp_auto_pc_0' (0#1) [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_axi_mem_intercon_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axi_mem_intercon_imp_auto_us_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_axi_mem_intercon_imp_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axi_mem_intercon_imp_auto_us_0' (0#1) [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_axi_mem_intercon_imp_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_AMOBU1' (0#1) [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:254]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1V218KX' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:435]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axi_mem_intercon_imp_auto_pc_1' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_axi_mem_intercon_imp_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axi_mem_intercon_imp_auto_pc_1' (0#1) [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_axi_mem_intercon_imp_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axi_mem_intercon_imp_auto_us_1' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_axi_mem_intercon_imp_auto_us_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axi_mem_intercon_imp_auto_us_1' (0#1) [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_axi_mem_intercon_imp_auto_us_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1V218KX' (0#1) [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:435]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axi_mem_intercon_imp_xbar_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_axi_mem_intercon_imp_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axi_mem_intercon_imp_xbar_0' (0#1) [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_axi_mem_intercon_imp_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_arready' does not match port width (2) of module 'top_level_axi_mem_intercon_imp_xbar_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1843]
+WARNING: [Synth 8-689] width (64) of port connection 's_axi_rdata' does not match port width (128) of module 'top_level_axi_mem_intercon_imp_xbar_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1860]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_rlast' does not match port width (2) of module 'top_level_axi_mem_intercon_imp_xbar_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1861]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_rresp' does not match port width (4) of module 'top_level_axi_mem_intercon_imp_xbar_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1863]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_rvalid' does not match port width (2) of module 'top_level_axi_mem_intercon_imp_xbar_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1864]
+WARNING: [Synth 8-7071] port 's_axi_bid' of module 'top_level_axi_mem_intercon_imp_xbar_0' is unconnected for instance 'xbar' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1794]
+WARNING: [Synth 8-7071] port 's_axi_rid' of module 'top_level_axi_mem_intercon_imp_xbar_0' is unconnected for instance 'xbar' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1794]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'top_level_axi_mem_intercon_imp_xbar_0' has 78 connections declared, but only 76 given [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1794]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axi_mem_intercon_1' (0#1) [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1344]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axis_data_fifo_0_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_axis_data_fifo_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axis_data_fifo_0_0' (0#1) [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_axis_data_fifo_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axis_tkeep' of module 'top_level_axis_data_fifo_0_0' is unconnected for instance 'axis_data_fifo_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1037]
+WARNING: [Synth 8-7023] instance 'axis_data_fifo_0' of module 'top_level_axis_data_fifo_0_0' has 12 connections declared, but only 11 given [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1037]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axis_fft_cfg_gen_0_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_axis_fft_cfg_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axis_fft_cfg_gen_0_0' (0#1) [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_axis_fft_cfg_gen_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_magnitude_0_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_magnitude_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_magnitude_0_0' (0#1) [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_magnitude_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_processing_system7_0_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_processing_system7_0_0' (0#1) [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'top_level_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1066]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'top_level_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1066]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'top_level_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1066]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'top_level_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1066]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'top_level_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1066]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'top_level_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1066]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'top_level_processing_system7_0_0' has 110 connections declared, but only 104 given [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1066]
+INFO: [Synth 8-6157] synthesizing module 'top_level_rst_ps7_0_100M_1' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_rst_ps7_0_100M_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_rst_ps7_0_100M_1' (0#1) [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_rst_ps7_0_100M_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'top_level_rst_ps7_0_100M_1' is unconnected for instance 'rst_ps7_0_100M' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1171]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'top_level_rst_ps7_0_100M_1' is unconnected for instance 'rst_ps7_0_100M' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1171]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'top_level_rst_ps7_0_100M_1' is unconnected for instance 'rst_ps7_0_100M' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1171]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'top_level_rst_ps7_0_100M_1' is unconnected for instance 'rst_ps7_0_100M' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1171]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'top_level_rst_ps7_0_100M_1' has 10 connections declared, but only 6 given [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1171]
+INFO: [Synth 8-6157] synthesizing module 'top_level_smartconnect_0_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_smartconnect_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_smartconnect_0_0' (0#1) [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_smartconnect_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'S01_AXI_awready' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S01_AXI_wready' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S01_AXI_bid' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S01_AXI_bresp' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S01_AXI_buser' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S01_AXI_bvalid' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S01_AXI_arready' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S01_AXI_rid' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S01_AXI_rdata' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S01_AXI_rresp' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S01_AXI_rlast' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S01_AXI_ruser' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S01_AXI_rvalid' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S02_AXI_awready' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S02_AXI_wready' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S02_AXI_bid' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S02_AXI_bresp' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S02_AXI_buser' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S02_AXI_bvalid' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S02_AXI_arready' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S02_AXI_rid' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S02_AXI_rdata' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S02_AXI_rresp' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S02_AXI_rlast' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S02_AXI_ruser' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'S02_AXI_rvalid' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_awid' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_awaddr' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_awlen' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_awsize' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_awburst' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_awlock' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_awcache' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_awprot' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_awregion' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_awqos' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_awuser' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_awvalid' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_wid' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_wdata' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_wstrb' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_wlast' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_wuser' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_wvalid' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_bready' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_arid' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_araddr' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_arlen' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_arsize' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_arburst' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_arlock' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_arcache' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_arregion' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_arqos' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_aruser' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_arvalid' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7071] port 'M02_AXI_rready' of module 'top_level_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+WARNING: [Synth 8-7023] instance 'smartconnect_0' of module 'top_level_smartconnect_0_0' has 213 connections declared, but only 150 given [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1178]
+INFO: [Synth 8-6157] synthesizing module 'top_level_xfft_0_1' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_xfft_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_xfft_0_1' (0#1) [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/.Xil/Vivado-170424-fedora/realtime/top_level_xfft_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'event_frame_started' of module 'top_level_xfft_0_1' is unconnected for instance 'xfft_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1329]
+WARNING: [Synth 8-7071] port 'event_tlast_unexpected' of module 'top_level_xfft_0_1' is unconnected for instance 'xfft_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1329]
+WARNING: [Synth 8-7071] port 'event_tlast_missing' of module 'top_level_xfft_0_1' is unconnected for instance 'xfft_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1329]
+WARNING: [Synth 8-7071] port 'event_status_channel_halt' of module 'top_level_xfft_0_1' is unconnected for instance 'xfft_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1329]
+WARNING: [Synth 8-7071] port 'event_data_in_channel_halt' of module 'top_level_xfft_0_1' is unconnected for instance 'xfft_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1329]
+WARNING: [Synth 8-7071] port 'event_data_out_channel_halt' of module 'top_level_xfft_0_1' is unconnected for instance 'xfft_0' [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1329]
+WARNING: [Synth 8-7023] instance 'xfft_0' of module 'top_level_xfft_0_1' has 18 connections declared, but only 12 given [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:1329]
+INFO: [Synth 8-6155] done synthesizing module 'top_level' (0#1) [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/synth/top_level.v:649]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_wrapper' (0#1) [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/hdl/top_level_wrapper.v:13]
+WARNING: [Synth 8-7129] Port M_ACLK in module s01_couplers_imp_1V218KX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s01_couplers_imp_1V218KX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_AMOBU1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_AMOBU1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m00_couplers_imp_1GTS4AD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_1GTS4AD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m00_couplers_imp_1GTS4AD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m00_couplers_imp_1GTS4AD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ACLK in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ARESETN in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2481.953 ; gain = 527.617 ; free physical = 3961 ; free virtual = 22142
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2493.828 ; gain = 539.492 ; free physical = 3971 ; free virtual = 22144
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2493.828 ; gain = 539.492 ; free physical = 3971 ; free virtual = 22144
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2493.828 ; gain = 0.000 ; free physical = 3971 ; free virtual = 22144
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_processing_system7_0_0/top_level_processing_system7_0_0/top_level_processing_system7_0_0_in_context.xdc] for cell 'top_level_i/processing_system7_0'
+Finished Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_processing_system7_0_0/top_level_processing_system7_0_0/top_level_processing_system7_0_0_in_context.xdc] for cell 'top_level_i/processing_system7_0'
+Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_axi_dma_0_0/top_level_axi_dma_0_0/top_level_axi_dma_0_0_in_context.xdc] for cell 'top_level_i/axi_dma_0'
+Finished Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_axi_dma_0_0/top_level_axi_dma_0_0/top_level_axi_dma_0_0_in_context.xdc] for cell 'top_level_i/axi_dma_0'
+Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_smartconnect_0_0/top_level_smartconnect_0_0/top_level_smartconnect_0_0_in_context.xdc] for cell 'top_level_i/smartconnect_0'
+Finished Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_smartconnect_0_0/top_level_smartconnect_0_0/top_level_smartconnect_0_0_in_context.xdc] for cell 'top_level_i/smartconnect_0'
+Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_axis_data_fifo_0_0/top_level_axis_data_fifo_0_0/top_level_axis_data_fifo_0_0_in_context.xdc] for cell 'top_level_i/axis_data_fifo_0'
+Finished Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_axis_data_fifo_0_0/top_level_axis_data_fifo_0_0/top_level_axis_data_fifo_0_0_in_context.xdc] for cell 'top_level_i/axis_data_fifo_0'
+Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_rst_ps7_0_100M_1/top_level_rst_ps7_0_100M_1/top_level_rst_ps7_0_100M_1_in_context.xdc] for cell 'top_level_i/rst_ps7_0_100M'
+Finished Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_rst_ps7_0_100M_1/top_level_rst_ps7_0_100M_1/top_level_rst_ps7_0_100M_1_in_context.xdc] for cell 'top_level_i/rst_ps7_0_100M'
+Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_axi_gpio_0_0/top_level_axi_gpio_0_0/top_level_axi_gpio_0_0_in_context.xdc] for cell 'top_level_i/axi_gpio_0'
+Finished Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_axi_gpio_0_0/top_level_axi_gpio_0_0/top_level_axi_gpio_0_0_in_context.xdc] for cell 'top_level_i/axi_gpio_0'
+Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_xfft_0_1/top_level_xfft_0_1/top_level_xfft_0_1_in_context.xdc] for cell 'top_level_i/xfft_0'
+Finished Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_xfft_0_1/top_level_xfft_0_1/top_level_xfft_0_1_in_context.xdc] for cell 'top_level_i/xfft_0'
+Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_magnitude_0_0/top_level_magnitude_0_0/top_level_magnitude_0_0_in_context.xdc] for cell 'top_level_i/magnitude_0'
+Finished Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_magnitude_0_0/top_level_magnitude_0_0/top_level_magnitude_0_0_in_context.xdc] for cell 'top_level_i/magnitude_0'
+Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_axis_fft_cfg_gen_0_0/top_level_axis_fft_cfg_gen_0_0/top_level_axis_fft_cfg_gen_0_0_in_context.xdc] for cell 'top_level_i/axis_fft_cfg_gen_0'
+Finished Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_axis_fft_cfg_gen_0_0/top_level_axis_fft_cfg_gen_0_0/top_level_axis_fft_cfg_gen_0_0_in_context.xdc] for cell 'top_level_i/axis_fft_cfg_gen_0'
+Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_axi_mem_intercon_imp_xbar_0/top_level_axi_mem_intercon_imp_xbar_0/top_level_axi_mem_intercon_imp_xbar_0_in_context.xdc] for cell 'top_level_i/axi_mem_intercon/xbar'
+Finished Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_axi_mem_intercon_imp_xbar_0/top_level_axi_mem_intercon_imp_xbar_0/top_level_axi_mem_intercon_imp_xbar_0_in_context.xdc] for cell 'top_level_i/axi_mem_intercon/xbar'
+Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_axi_mem_intercon_imp_auto_pc_0/top_level_axi_mem_intercon_imp_auto_pc_0/top_level_axi_mem_intercon_imp_auto_pc_0_in_context.xdc] for cell 'top_level_i/axi_mem_intercon/s00_couplers/auto_pc'
+Finished Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_axi_mem_intercon_imp_auto_pc_0/top_level_axi_mem_intercon_imp_auto_pc_0/top_level_axi_mem_intercon_imp_auto_pc_0_in_context.xdc] for cell 'top_level_i/axi_mem_intercon/s00_couplers/auto_pc'
+Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_axi_mem_intercon_imp_auto_us_0/top_level_axi_mem_intercon_imp_auto_us_0/top_level_axi_mem_intercon_imp_auto_us_0_in_context.xdc] for cell 'top_level_i/axi_mem_intercon/s00_couplers/auto_us'
+Finished Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_axi_mem_intercon_imp_auto_us_0/top_level_axi_mem_intercon_imp_auto_us_0/top_level_axi_mem_intercon_imp_auto_us_0_in_context.xdc] for cell 'top_level_i/axi_mem_intercon/s00_couplers/auto_us'
+Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_axi_mem_intercon_imp_auto_pc_1/top_level_axi_mem_intercon_imp_auto_pc_1/top_level_axi_mem_intercon_imp_auto_pc_1_in_context.xdc] for cell 'top_level_i/axi_mem_intercon/s01_couplers/auto_pc'
+Finished Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_axi_mem_intercon_imp_auto_pc_1/top_level_axi_mem_intercon_imp_auto_pc_1/top_level_axi_mem_intercon_imp_auto_pc_1_in_context.xdc] for cell 'top_level_i/axi_mem_intercon/s01_couplers/auto_pc'
+Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_axi_mem_intercon_imp_auto_us_1/top_level_axi_mem_intercon_imp_auto_us_1/top_level_axi_mem_intercon_imp_auto_us_1_in_context.xdc] for cell 'top_level_i/axi_mem_intercon/s01_couplers/auto_us'
+Finished Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.gen/sources_1/bd/top_level/ip/top_level_axi_mem_intercon_imp_auto_us_1/top_level_axi_mem_intercon_imp_auto_us_1/top_level_axi_mem_intercon_imp_auto_us_1_in_context.xdc] for cell 'top_level_i/axi_mem_intercon/s01_couplers/auto_us'
+Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.srcs/constrs_1/new/artyz720_pinout.xdc]
+Finished Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.srcs/constrs_1/new/artyz720_pinout.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.srcs/constrs_1/new/artyz720_pinout.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_level_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_level_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2542.754 ; gain = 0.000 ; free physical = 4120 ; free virtual = 22293
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2542.789 ; gain = 0.000 ; free physical = 4120 ; free virtual = 22293
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2542.789 ; gain = 588.453 ; free physical = 4099 ; free virtual = 22254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2550.758 ; gain = 596.422 ; free physical = 4099 ; free virtual = 22254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2550.758 ; gain = 596.422 ; free physical = 4099 ; free virtual = 22254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2550.758 ; gain = 596.422 ; free physical = 4096 ; free virtual = 22252
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port M00_ACLK in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_bid[5] in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_bid[4] in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_bid[3] in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_bid[2] in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_bid[1] in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_rid[5] in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_rid[4] in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_rid[3] in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_rid[2] in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_rid[1] in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ACLK in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ARESETN in module top_level_axi_mem_intercon_1 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2550.758 ; gain = 596.422 ; free physical = 4087 ; free virtual = 22250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2645.758 ; gain = 691.422 ; free physical = 3949 ; free virtual = 22132
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2645.758 ; gain = 691.422 ; free physical = 3949 ; free virtual = 22132
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2655.773 ; gain = 701.438 ; free physical = 3941 ; free virtual = 22124
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2830.586 ; gain = 876.250 ; free physical = 3789 ; free virtual = 21971
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2830.586 ; gain = 876.250 ; free physical = 3789 ; free virtual = 21971
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2830.586 ; gain = 876.250 ; free physical = 3789 ; free virtual = 21971
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2830.586 ; gain = 876.250 ; free physical = 3789 ; free virtual = 21971
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2830.586 ; gain = 876.250 ; free physical = 3789 ; free virtual = 21971
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2830.586 ; gain = 876.250 ; free physical = 3789 ; free virtual = 21971
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------------------------------+----------+
+|      |BlackBox name                            |Instances |
++------+-----------------------------------------+----------+
+|1     |top_level_axi_dma_0_0                    |         1|
+|2     |top_level_axi_gpio_0_0                   |         1|
+|3     |top_level_axi_mem_intercon_imp_xbar_0    |         1|
+|4     |top_level_axi_mem_intercon_imp_auto_pc_0 |         1|
+|5     |top_level_axi_mem_intercon_imp_auto_us_0 |         1|
+|6     |top_level_axi_mem_intercon_imp_auto_pc_1 |         1|
+|7     |top_level_axi_mem_intercon_imp_auto_us_1 |         1|
+|8     |top_level_axis_data_fifo_0_0             |         1|
+|9     |top_level_axis_fft_cfg_gen_0_0           |         1|
+|10    |top_level_magnitude_0_0                  |         1|
+|11    |top_level_processing_system7_0_0         |         1|
+|12    |top_level_rst_ps7_0_100M_1               |         1|
+|13    |top_level_smartconnect_0_0               |         1|
+|14    |top_level_xfft_0_1                       |         1|
++------+-----------------------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------------------+------+
+|      |Cell                                   |Count |
++------+---------------------------------------+------+
+|1     |top_level_axi_dma_0                    |     1|
+|2     |top_level_axi_gpio_0                   |     1|
+|3     |top_level_axi_mem_intercon_imp_auto_pc |     2|
+|5     |top_level_axi_mem_intercon_imp_auto_us |     2|
+|7     |top_level_axi_mem_intercon_imp_xbar    |     1|
+|8     |top_level_axis_data_fifo_0             |     1|
+|9     |top_level_axis_fft_cfg_gen_0           |     1|
+|10    |top_level_magnitude_0                  |     1|
+|11    |top_level_processing_system7_0         |     1|
+|12    |top_level_rst_ps7_0_100M               |     1|
+|13    |top_level_smartconnect_0               |     1|
+|14    |top_level_xfft_0                       |     1|
+|15    |OBUF                                   |     4|
++------+---------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2830.586 ; gain = 876.250 ; free physical = 3789 ; free virtual = 21971
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2830.586 ; gain = 827.289 ; free physical = 3789 ; free virtual = 21971
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2830.594 ; gain = 876.250 ; free physical = 3789 ; free virtual = 21971
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2830.594 ; gain = 0.000 ; free physical = 3954 ; free virtual = 22137
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2830.594 ; gain = 0.000 ; free physical = 3958 ; free virtual = 22141
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 187c3456
+INFO: [Common 17-83] Releasing license: Synthesis
+62 Infos, 130 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 2830.621 ; gain = 1075.129 ; free physical = 3958 ; free virtual = 22141
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1613.365; main = 1613.365; forked = 206.866
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4177.309; main = 2830.590; forked = 1614.547
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2854.598 ; gain = 0.000 ; free physical = 3958 ; free virtual = 22141
+INFO: [Common 17-1381] The checkpoint '/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/synth_1/top_level_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file top_level_wrapper_utilization_synth.rpt -pb top_level_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 12 20:58:41 2026...

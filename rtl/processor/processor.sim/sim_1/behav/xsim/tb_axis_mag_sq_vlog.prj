@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../Xilinx/2025.1/data/rsb/busdef" --include "../../../../processor.gen/sources_1/bd/top_level/ipshared/ec67/hdl" --include "../../../../processor.gen/sources_1/bd/top_level/ipshared/6cfa/hdl" --include "../../../../processor.gen/sources_1/bd/top_level/ipshared/f0b6/hdl/verilog" --include "../../../../processor.gen/sources_1/bd/top_level/ipshared/a8e4/hdl/verilog" --include "../../../../processor.gen/sources_1/bd/top_level/ipshared/434f/hdl" --include "/home/daniel/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
+"../../../../processor.srcs/sim_1/new/tb_axis_mag_sq.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

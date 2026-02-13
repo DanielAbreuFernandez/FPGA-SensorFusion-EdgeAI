@@ -1,0 +1,4 @@
+domain_path: /home/daniel/Documents/FPGA-SensorFusion-EdgeAI/sw/artyz7_platform/export/artyz7_platform/sw/standalone_ps7_cortexa9_0
+app_src_dir: /home/daniel/Xilinx/2025.1/Vitis/data/embeddedsw/lib/sw_apps/hello_world
+template: hello_world
+lang: c

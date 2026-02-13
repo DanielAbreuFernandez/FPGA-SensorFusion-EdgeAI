@@ -1,0 +1,6 @@
+Time resolution is 1 ps
+                               A OUT data=12 (0x0000000c) TLAST=0 time=215000
+                               B OUT data=26 (0x0000001a) TLAST=0 time=245000
+Done.
+$finish called at time : 305 ns : File "/home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.srcs/sim_1/new/tb_axis_mag_sq.v" Line 102
+INFO: xsimkernel Simulation Memory Usage: 491108 KB (Peak: 540440 KB), Simulation CPU Usage: 710 ms

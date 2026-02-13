@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Thu Feb 12 20:56:10 2026
+# Process ID         : 168208
+# Current directory  : /home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/top_level_magnitude_0_0_synth_1
+# Command line       : vivado -log top_level_magnitude_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_magnitude_0_0.tcl
+# Log file           : /home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/top_level_magnitude_0_0_synth_1/top_level_magnitude_0_0.vds
+# Journal file       : /home/daniel/Documents/FPGA-SensorFusion-EdgeAI/rtl/processor/processor.runs/top_level_magnitude_0_0_synth_1/vivado.jou
+# Running On         : fedora
+# Platform           : Fedora
+# Operating System   : Fedora Linux 43 (KDE Plasma Desktop Edition)
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12700K
+# CPU Frequency      : 4589.286 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 20
+# Host memory        : 33421 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 42010 MB
+# Available Virtual  : 25882 MB
+#-----------------------------------------------------------
+source top_level_magnitude_0_0.tcl -notrace
