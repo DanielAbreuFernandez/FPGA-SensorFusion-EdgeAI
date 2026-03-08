@@ -1,0 +1,17 @@
+services:
+  petalinux:
+    build:
+      context: ./petalinux-docker
+    image: petalinux:2025.1
+    container_name: petalinux_2025_1
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./projects:/home/petalinux/work
+      - ./downloads:/home/petalinux/downloads
+    environment:
+      - DL_DIR=/home/petalinux/downloads
+    ulimits:
+      nofile:
+        soft: 100000
+        hard: 100000
